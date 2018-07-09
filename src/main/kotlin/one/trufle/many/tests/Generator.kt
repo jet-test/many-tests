@@ -15,6 +15,7 @@ class Generator(private val config: Configuration) {
     }
 
     fun generate() {
+        File(root).deleteRecursively()
         mainModule()
         val methods = (0..config.methods).map { GeneratedMethod("test$it") }
         val tests = (0..config.tests).map { GeneratedTest("Generated${it}Test", methods) }
