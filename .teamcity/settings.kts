@@ -8,6 +8,7 @@ version = "2018.1"
 project {
 
     val vcs = GitVcsRoot{
+        id("ManyTests_VCS")
         name = "https://github.com/jet-test/many-tests.git#refs/heads/master"
         url = "https://github.com/jet-test/many-tests.git"
     }
@@ -15,6 +16,7 @@ project {
     vcsRoot(vcs)
 
     buildType {
+        id("ManyTests_Build")
         name = "Build"
 
         vcs {
