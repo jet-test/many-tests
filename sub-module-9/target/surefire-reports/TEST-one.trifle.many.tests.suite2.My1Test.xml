@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="100" failures="0" name="one.trifle.many.tests.suite2.My1Test" time="0.002" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2018.3"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.172-b11"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/lexa/projects/manytests"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/lexa/projects/manytests"/>
+    <property name="java.runtime.version" value="1.8.0_172-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/m5/5x1s2h656j3_lgymfmfjg57r0000gp/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/lexa/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-1/183.665/IntelliJ IDEA 2018.3 EAP.app/Contents/plugins/maven/lib/maven3/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/lexa/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.13.5"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/lexa"/>
+    <property name="user.timezone" value="Asia/Novosibirsk"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="lexa"/>
+    <property name="java.class.path" value="/Users/lexa/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-1/183.665/IntelliJ IDEA 2018.3 EAP.app/Contents/plugins/maven/lib/maven3/boot/plexus-classworlds-2.5.2.jar:/Users/lexa/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-1/183.665/IntelliJ IDEA 2018.3 EAP.app/Contents/lib/idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2018.3 clean test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_172"/>
+    <property name="java.ext.dirs" value="/Users/lexa/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/lexa/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-1/183.665/IntelliJ IDEA 2018.3 EAP.app/Contents/plugins/maven/lib/maven3"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test00" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test01" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test02" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test03" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test04" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test05" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test06" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test07" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test08" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test09" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test10" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test11" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test12" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test13" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test14" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test15" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test16" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test17" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test18" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test19" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test20" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test21" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test22" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test23" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test24" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test25" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test26" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test27" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test28" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test29" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test30" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test31" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test32" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test33" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test34" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test35" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test36" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test37" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test38" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test39" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test40" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test41" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test42" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test43" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test44" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test45" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test46" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test47" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test48" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test49" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test50" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test51" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test52" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test53" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test54" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test55" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test56" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test57" time="0.001"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test58" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test59" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test60" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test61" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test62" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test63" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test64" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test65" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test66" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test67" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test68" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test69" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test70" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test71" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test72" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test73" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test74" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test75" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test76" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test77" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test78" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test79" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test80" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test81" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test82" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test83" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test84" time="0.001"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test85" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test86" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test87" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test88" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test89" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test90" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test91" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test92" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test93" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test94" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test95" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test96" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test97" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test98" time="0"/>
+  <testcase classname="one.trifle.many.tests.suite2.My1Test" name="test99" time="0"/>
+</testsuite>
