@@ -24,7 +24,7 @@ class Generator(private val config: Configuration) {
         mainModule()
         val methods = (1..config.methods).map { GeneratedMethod("test$it") }
         val tests = (1..config.tests).map { GeneratedTest("Generated$it", methods) }
-        val suite = GeneratedSuite("JunitSuite..Test", tests)
+        val suite = GeneratedSuite("JunitSuiteTest", tests)
         config.modules.asSequence()
                 .map { GeneratedModule(it, ModulePom(it)).apply { create() } }.forEach { module ->
                     tests.asSequence().forEach { test ->
