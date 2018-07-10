@@ -4,9 +4,9 @@ import java.io.File
 
 fun main(args: Array<String>) {
 
-    val modules: Int = args.getOrElse(0) {"10"}.toInt()
-    val tests: Int = args.getOrElse(1) {"10"}.toInt()
-    val methods: Int = args.getOrElse(2) {"10"}.toInt()
+    val modules: Int = args.getOrElse(0) {"20"}.toInt()
+    val tests: Int = args.getOrElse(1) {"1000"}.toInt()
+    val methods: Int = args.getOrElse(2) {"1"}.toInt()
 
     Generator(Configuration((1..modules).map { "module$it" }, tests, methods)).generate()
 }
