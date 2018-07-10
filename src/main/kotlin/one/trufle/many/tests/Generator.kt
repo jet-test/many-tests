@@ -123,12 +123,17 @@ class GeneratedTest(val name: String, private val methods: List<GeneratedMethod>
 package one.trifle.many.tests.$path;
 import org.junit.Test;
 public class $name {
-${methods.joinToString(separator = "\n") { "    " + it.create() }}
+${methods.joinToString(separator = "\n") { it.create() }}
 }""".trimIndent()
 }
 
 class GeneratedMethod(private val name: String) {
-    fun create(): String = "@Test public void $name() {System.err.println($name);}"
+    fun create(): String = """
+    @Test public void $name() {
+        System.err.println("error: $name");
+        System.out.println("out: $name");
+    }
+"""
 }
 
 data class Configuration(val modules: List<String>, val tests: Int, val methods: Int)
