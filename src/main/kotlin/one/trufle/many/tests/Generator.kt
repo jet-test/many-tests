@@ -23,14 +23,14 @@ class Generator(private val config: Configuration) {
         File(root).deleteRecursively()
         mainModule()
         val methods = (1..config.methods).map { GeneratedMethod("test$it") }
-        val tests = (1..config.tests).map { GeneratedTest("Generated$it", methods) }
-        val suite = GeneratedSuite("JunitSuiteTest", tests)
+        val tests = (1..config.tests).map { GeneratedTest("Generated${it}Test", methods) }
+//        val suite = GeneratedSuite("JunitSuiteTest", tests)
         config.modules.asSequence()
                 .map { GeneratedModule(it, ModulePom(it)).apply { create() } }.forEach { module ->
                     tests.asSequence().forEach { test ->
                         File("${module.path}/${test.name}.java").writeText(test.create(module.name))
                     }
-                    File("${module.path}/${suite.name}.java").writeText(suite.create(module.name))
+//                    File("${module.path}/${suite.name}.java").writeText(suite.create(module.name))
                 }
     }
 }
@@ -94,6 +94,14 @@ ${modules.joinToString(separator = "\n") { "        <module>$it</module>" }}
                 <configuration>
                     <source>${'$'}{java.version}</source>
                     <target>${'$'}{java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.7.2</version>
+                <configuration>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                    <runOrder>alphabetical</runOrder>
                 </configuration>
             </plugin>
         </plugins>
