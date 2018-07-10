@@ -6,39 +6,42 @@ import jetbrains.buildServer.configs.kotlin.v2018_1.vcs.GitVcsRoot
 version = "2018.1"
 
 project {
-    vcsRoot(ManyTestsVCS)
 
-    buildType {
-        name = "Build"
+    vcsRoot(HttpsGithubComJetTestManyTestsGitRefsHeadsMaster)
 
-        vcs {
-            root(ManyTestsVCS)
-        }
+    buildType(Build)
+}
 
-        steps {
-            maven {
-                goals = "clean install exec:java"
-                mavenVersion = custom {
-                    path = "/usr/local/Cellar/maven/3.5.4/libexec"
-                }
-            }
-            maven {
-                goals = "clean test"
-                pomLocation = "mytest/pom.xml"
-                mavenVersion = custom {
-                    path = "/usr/local/Cellar/maven/3.5.4/libexec"
-                }
+object Build : BuildType({
+    name = "Build"
+
+    vcs {
+        root(HttpsGithubComJetTestManyTestsGitRefsHeadsMaster)
+    }
+
+    steps {
+        maven {
+            goals = "clean install exec:java"
+            mavenVersion = custom {
+                path = "/usr/local/Cellar/maven/3.5.4/libexec"
             }
         }
-
-        triggers {
-            vcs {
+        maven {
+            goals = "clean test"
+            pomLocation = "mytest/pom.xml"
+            mavenVersion = custom {
+                path = "/usr/local/Cellar/maven/3.5.4/libexec"
             }
         }
     }
-}
 
-object ManyTestsVCS: GitVcsRoot({
+    triggers {
+        vcs {
+        }
+    }
+})
+
+object HttpsGithubComJetTestManyTestsGitRefsHeadsMaster : GitVcsRoot({
     name = "https://github.com/jet-test/many-tests.git#refs/heads/master"
     url = "https://github.com/jet-test/many-tests.git"
 })
