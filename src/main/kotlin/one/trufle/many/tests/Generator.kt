@@ -128,7 +128,7 @@ ${methods.joinToString(separator = "\n") { "    " + it.create() }}
 }
 
 class GeneratedMethod(private val name: String) {
-    fun create(): String = "@Test public void $name() {System.err.println($name)}"
+    fun create(): String = "@Test public void $name() {System.err.println($name);}"
 }
 
 data class Configuration(val modules: List<String>, val tests: Int, val methods: Int)
