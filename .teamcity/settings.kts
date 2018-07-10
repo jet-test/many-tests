@@ -6,21 +6,14 @@ import jetbrains.buildServer.configs.kotlin.v2018_1.vcs.GitVcsRoot
 version = "2018.1"
 
 project {
-
-    val vcs = GitVcsRoot{
-        id("ManyTests_VCS")
-        name = "https://github.com/jet-test/many-tests.git#refs/heads/master"
-        url = "https://github.com/jet-test/many-tests.git"
-    }
-
-    vcsRoot(vcs)
+    vcsRoot(ManyTestsVCS)
 
     buildType {
         id("ManyTests_Build")
         name = "Build"
 
         vcs {
-            root(vcs)
+            root(ManyTestsVCS)
         }
 
         steps {
@@ -45,3 +38,9 @@ project {
         }
     }
 }
+
+object ManyTestsVCS: GitVcsRoot({
+    id("ManyTests_VCS")
+    name = "https://github.com/jet-test/many-tests.git#refs/heads/master"
+    url = "https://github.com/jet-test/many-tests.git"
+})
