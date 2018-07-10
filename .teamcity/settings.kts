@@ -9,7 +9,6 @@ project {
     vcsRoot(ManyTestsVCS)
 
     buildType {
-        id("ManyTests_Build")
         name = "Build"
 
         vcs {
@@ -40,7 +39,6 @@ project {
 }
 
 object ManyTestsVCS: GitVcsRoot({
-    id("ManyTests_VCS")
     name = "https://github.com/jet-test/many-tests.git#refs/heads/master"
     url = "https://github.com/jet-test/many-tests.git"
 })
