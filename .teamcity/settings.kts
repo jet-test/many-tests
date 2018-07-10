@@ -15,6 +15,12 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    params {
+        param("methods.count", "10")
+        param("tests.count", "10")
+        param("modules.count", "10")
+    }
+
     vcs {
         root(HttpsGithubComJetTestManyTestsGitRefsHeadsMaster)
     }
