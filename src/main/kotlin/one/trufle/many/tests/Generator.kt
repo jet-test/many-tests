@@ -23,18 +23,20 @@ class Generator(private val config: Configuration) {
         File(root).deleteRecursively()
         mainModule()
         val methods = (1..config.methods).map { GeneratedMethod("test$it") }
-        val tests = (1..config.tests).map { GeneratedTest("Generated${it}Test", methods) }
+        val tests = (1..config.tests).map { GeneratedTest("Generated$it", methods) }
+        val suite = GeneratedSuite("JunitSuite..Test", tests)
         config.modules.asSequence()
                 .map { GeneratedModule(it, ModulePom(it)).apply { create() } }.forEach { module ->
                     tests.asSequence().forEach { test ->
                         File("${module.path}/${test.name}.java").writeText(test.create(module.name))
                     }
+                    File("${module.path}/${suite.name}.java").writeText(suite.create(module.name))
                 }
     }
 }
 
 class GeneratedModule(val name: String, val pom: GeneratedPom) {
-    val path = "$root/$name/src/test/java/one/trifle/many/tests"
+    val path = "$root/$name/src/test/java/one/trifle/many/tests/$name"
     fun create() {
         File("$root/$name").mkdir()
         File("$root/$name/pom.xml").writeText(pom.create())
@@ -118,6 +120,23 @@ class ModulePom(private val name: String) : GeneratedPom {
     """.trimIndent()
 }
 
+class GeneratedSuite(val name: String, private val tests: List<GeneratedTest>) {
+    fun create(path: String) = """
+package one.trifle.many.tests.$path;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+
+@RunWith(Suite.class)
+
+@Suite.SuiteClasses({
+${tests.joinToString(separator = ",\n", transform = {"    ${it.name}.class"}) }
+})
+
+public class $name {
+}
+    """.trimIndent()
+}
+
 class GeneratedTest(val name: String, private val methods: List<GeneratedMethod>) {
     fun create(path: String): String = """
 package one.trifle.many.tests.$path;
@@ -130,10 +149,8 @@ ${methods.joinToString(separator = "\n") { it.create() }}
 class GeneratedMethod(private val name: String) {
     fun create(): String = """
     @Test public void $name() {
-        for(int i = 0; i < 100; i++) {
         System.err.println("error: $name");
         System.out.println("out: $name");
-        }
     }
 """
 }
