@@ -130,8 +130,10 @@ ${methods.joinToString(separator = "\n") { it.create() }}
 class GeneratedMethod(private val name: String) {
     fun create(): String = """
     @Test public void $name() {
+        for(int i = 0; i < 100; i++) {
         System.err.println("error: $name");
         System.out.println("out: $name");
+        }
     }
 """
 }
