@@ -3,7 +3,12 @@ package one.trufle.many.tests
 import java.io.File
 
 fun main(args: Array<String>) {
-    Generator(Configuration((0..100).map { "module$it" }, 100, 100)).generate()
+
+    val modules: Int = args.getOrElse(0) {"10"}.toInt()
+    val tests: Int = args.getOrElse(1) {"10"}.toInt()
+    val methods: Int = args.getOrElse(2) {"10"}.toInt()
+
+    Generator(Configuration((1..modules).map { "module$it" }, tests, methods)).generate()
 }
 
 private const val root = "mytest"
@@ -17,8 +22,8 @@ class Generator(private val config: Configuration) {
     fun generate() {
         File(root).deleteRecursively()
         mainModule()
-        val methods = (0..config.methods).map { GeneratedMethod("test$it") }
-        val tests = (0..config.tests).map { GeneratedTest("Generated${it}Test", methods) }
+        val methods = (1..config.methods).map { GeneratedMethod("test$it") }
+        val tests = (1..config.tests).map { GeneratedTest("Generated${it}Test", methods) }
         config.modules.asSequence()
                 .map { GeneratedModule(it, ModulePom(it)).apply { create() } }.forEach { module ->
                     tests.asSequence().forEach { test ->

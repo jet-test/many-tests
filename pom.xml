@@ -73,6 +73,11 @@
                 <version>1.2.1</version>
                 <configuration>
                     <mainClass>one.trufle.many.tests.GeneratorKt</mainClass>
+                    <arguments>
+                        <argument>${modules.count}</argument>
+                        <argument>${tests.count}</argument>
+                        <argument>${methods.count}</argument>
+                    </arguments>
                 </configuration>
             </plugin>
 
