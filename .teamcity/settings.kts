@@ -16,8 +16,8 @@ object Build : BuildType({
     name = "Build"
 
     params {
-        param("methods.count", "10")
-        param("tests.count", "10")
+        param("methods.count", "100")
+        param("tests.count", "1000")
         param("modules.count", "10")
     }
 
