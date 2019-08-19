@@ -28,16 +28,10 @@ object Build : BuildType({
     steps {
         maven {
             goals = "clean install exec:java -Dmodules.count=%modules.count% -Dtests.count=%tests.count% -Dmethods.count=%methods.count%"
-            mavenVersion = custom {
-                path = "/usr/local/Cellar/maven/3.5.4/libexec"
-            }
         }
         maven {
             goals = "clean test"
             pomLocation = "mytest/pom.xml"
-            mavenVersion = custom {
-                path = "/usr/local/Cellar/maven/3.5.4/libexec"
-            }
         }
     }
 
