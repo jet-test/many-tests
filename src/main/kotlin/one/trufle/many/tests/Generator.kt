@@ -59,7 +59,7 @@ class RootPom(private val modules: List<String>) : GeneratedPom {
     <groupId>one.trifle</groupId>
     <artifactId>many-tests</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <modules>
 ${modules.joinToString(separator = "\n") { "        <module>$it</module>" }}
     </modules>
@@ -119,7 +119,7 @@ class ModulePom(private val name: String) : GeneratedPom {
     <parent>
         <groupId>one.trifle</groupId>
         <artifactId>many-tests</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.2-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
