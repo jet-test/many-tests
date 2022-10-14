@@ -17,7 +17,7 @@ object Build : BuildType({
 
     params {
         param("methods.count", "100")
-        param("tests.count", "1000")
+        param("tests.count", "100")
         param("modules.count", "10")
     }
 
